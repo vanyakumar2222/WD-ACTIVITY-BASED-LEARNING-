@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yummy Food</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #fff3e0;
+            text-align: center;
+        }
+
+        nav {
+            background: #ff5722;
+            color: white;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        header {
+            background: #ffcc80;
+            padding: 30px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            width: 200px;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px #ddd;
+        }
+
+        .card img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .price {
+            color: #e64a19;
+            font-weight: bold;
+        }
+
+        button {
+            background: #ff5722;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #c62828;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>🍕 Yummy Food</h2>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <header id="home">
+        <h1>Good Food, Good Mood! 😋</h1>
+        <p>Fresh, tasty and delivered with love.</p>
+        <h3>🎉 Special Offer: 20% OFF</h3>
+    </header>
+
+    <h2 id="menu">Our Delicious Menu 🍔</h2>
+
+    <div class="menu">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" alt="Burger">
+            <h3>Cheese Burger</h3>
+            <p class="price">₹149</p>
+            <button onclick="alert('Burger selected!')">Order Now</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400" alt="Pizza">
+            <h3>Cheese Pizza</h3>
+            <p class="price">₹249</p>
+            <button onclick="alert('Pizza selected!')">Order Now</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=400" alt="Biryani">
+            <h3>Veg Biryani</h3>
+            <p class="price">₹179</p>
+            <button onclick="alert('Biryani selected!')">Order Now</button>
+        </div>
+    </div>
+
+    <section id="contact">
+        <h3>📞 Contact Us</h3>
+        <p>Hyderabad | food@example.com</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Yummy Food | Made with ❤️</p>
+    </footer>
+
+</body>
+</html>
+

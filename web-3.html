@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analytics Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+        header {
+            background: #172554;
+            color: white;
+            padding: 18px;
+        }
+        .layout {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            min-height: 90vh;
+        }
+        aside {
+            background: #1e293b;
+            padding: 20px;
+        }
+        aside a {
+            display: block;
+            color: #cbd5e1;
+            text-decoration: none;
+            padding: 12px 5px;
+        }
+        aside a:hover { color: #38bdf8; }
+        main { padding: 22px; }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px #dbe3ed;
+        }
+        .card h3 { font-size: 14px; color: #64748b; }
+        .number { font-size: 25px; font-weight: bold; color: #4f46e5; }
+        .chart {
+            margin-top: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 14px;
+        }
+        .bars {
+            display: flex;
+            height: 140px;
+            align-items: end;
+            justify-content: space-around;
+            gap: 10px;
+            border-bottom: 2px solid #ddd;
+        }
+        .bar {
+            background: linear-gradient(#818cf8, #4f46e5);
+            width: 10%;
+            border-radius: 6px 6px 0 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background: white;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        th { background: #e0e7ff; }
+        .activity { color: #059669; font-weight: bold; }
+
+        @media (max-width: 600px) {
+            .layout { grid-template-columns: 1fr; }
+            aside { display: flex; flex-wrap: wrap; gap: 10px; }
+            aside a { padding: 5px; }
+            main { padding: 12px; }
+            table { font-size: 12px; }
+            th, td { padding: 8px 4px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2> Insight Dashboard</h2>
+    <p>Your business at a glance </p>
+</header>
+
+<div class="layout">
+    <aside>
+        <a href="#overview"> Overview</a>
+        <a href="#sales">Sales</a>
+        <a href="#users"> Users</a>
+        <a href="#activity"> Activity</a>
+    </aside>
+
+    <main id="overview">
+        <h2>Welcome Back! </h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3> Revenue</h3>
+                <div class="number">₹85,400</div>
+                <p>⬆ 12% this month</p>
+            </div>
+            <div class="card" id="users">
+                <h3>👥 Users</h3>
+                <div class="number">2,450</div>
+                <p>⬆ 8% growth</p>
+            </div>
+            <div class="card">
+                <h3>🛒 Sales</h3>
+                <div class="number">1,280</div>
+                <p>⬆ 15% growth</p>
+            </div>
+        </div>
+
+        <div class="chart" id="sales">
+            <h3>📈 Weekly Sales Trend</h3>
+            <div class="bars">
+                <div class="bar" style="height:40%"></div>
+                <div class="bar" style="height:65%"></div>
+                <div class="bar" style="height:50%"></div>
+                <div class="bar" style="height:85%"></div>
+                <div class="bar" style="height:60%"></div>
+                <div class="bar" style="height:100%"></div>
+                <div class="bar" style="height:75%"></div>
+            </div>
+            <p>Mon　 Tue　 Wed　 Thu　 Fri　 Sat　 Sun</p>
+        </div>
+
+        <div class="chart" id="activity">
+            <h3> Recent Activities</h3>
+            <table>
+                <tr><th>Activity</th><th>Status</th><th>Amount</th></tr>
+                <tr><td>Order #101</td><td class="activity">Completed</td><td>₹2,500</td></tr>
+                <tr><td>Order #102</td><td class="activity">Completed</td><td>₹1,800</td></tr>
+                <tr><td>Order #103</td><td>Pending</td><td>₹950</td></tr>
+            </table>
+        </div>
+    </main>
+</div>
+
+</body>
+</html>
